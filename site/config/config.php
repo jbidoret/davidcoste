@@ -41,7 +41,7 @@ return [
   'thumbs' => [
     'quality' => 80,
     'driver' => 'im',
-    'bin' => 'convert',
+    'bin' => '/usr/bin/convert',
     'presets' => [
       'listitem' => [ 'width' => 300, 'height' => 170, 'crop' => 'center' ]
     ],

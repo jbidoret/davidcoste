@@ -11,9 +11,9 @@
             $cover = $project->cover()->toFile();
             if ($cover):
               $thumb = $cover->resize(450);
-              
               ?>
               <img
+                id="<?=$image->slug() ?>"
                 width="<?= $thumb->width() ?>"
                 height="<?= $thumb->height() ?>"
                 src="<?= $thumb->url() ?>"
