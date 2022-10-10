@@ -13,7 +13,7 @@
               $thumb = $cover->resize(450);
               ?>
               <img
-                id="<?=$cover->slug() ?>"
+                id="<?=str::Slug($cover->name()) ?>"
                 width="<?= $thumb->width() ?>"
                 height="<?= $thumb->height() ?>"
                 src="<?= $thumb->url() ?>"
