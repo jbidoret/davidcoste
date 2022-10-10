@@ -26,7 +26,7 @@
                     sizes="(max-width: 500px) 100vw, (max-width: 700px) 66vw, (max-width: 900px) 33vw, (max-width: 1400px) 20vw, 18vw"
                 <?php endif; ?>
 
-                alt="<?= e($cover->alt()->isNotEmpty(), $cover->alt(), $project->title()) ?>">
+                alt="<?= e($cover->alt()->isNotEmpty(), $cover->alt()->html(), $project->title()->html()) ?>">
           <?php endif ?>
           <figcaption>
             <h1><?= $project->title() ?></h1>
