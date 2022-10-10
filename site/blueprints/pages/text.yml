@@ -1,0 +1,29 @@
+title: Texte
+preset: page
+
+pages: false
+
+status:
+  draft: Brouillon
+  listed: Publiée
+
+fields:
+  subtitle:
+    label: Sous-titre
+    type: text
+    width: 3/4
+  date:
+    label: Date
+    type: date
+    width: 1/4
+  author:
+    label: Auteur(s)
+    type: text
+  intro:
+    label: Introduction
+    type: textarea
+    size: small
+  text:
+    label: Texte
+    type: textarea
+    size: large

@@ -10,7 +10,8 @@ User settings for GUlp
  * to define their loading order.
  */
 module.exports.pluginScripts = [
-  // 'node_modules/lib/dist/lib.js',
+  'assets/js/flickity.pkgd.min.js',
+  'assets/js/hash.js',
 ];
 
 /* List all the Styles plugin files you are using in `pluginStyles`
@@ -39,4 +40,4 @@ module.exports.userStyles = [
  * write your local dev url in the localDevUrl variable.
  * module.exports.localDevUrl = 'http://localhost/your-project/';
  */
-module.exports.localDevUrl = 'http://localhost/';
+module.exports.localDevUrl = 'http://localhost/davidcoste.com';

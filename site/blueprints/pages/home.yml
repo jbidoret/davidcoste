@@ -1,29 +1,29 @@
 title: Accueil
 
-preset: page
-pages: false
-
 options:
-  changeSlug: false
-  changeTitle: false
-  duplicate: false
-  delete: false
-  status: false
+    changeStatus: false
 
 fields:
-  text:
-    label: Texte
-    type: markdown
-    size: small
-  
-  metadescription:
-    label: Meta Description
-    type: text
-    width: 1/2
+    featured_type:
+        width: 1/3
+        label: Contenu à la une
+        type: select
+        options:
+            news: Actualité
+            project: Projet spécifique
+            random: Projets aléatoires
+    news:
+        width: 2/3
+        when:
+            featured_type: news
+        type: select
+        options: query
+        query: kirby.page("actualites").children.listed
 
-  metaimage:
-    label: Meta Image
-    type: files
-    max: 1
-    width: 1/2    
-
+    project:
+        width: 2/3
+        when:
+            featured_type: project
+        type: select
+        options: query
+        query: kirby.page("travaux").children.listed

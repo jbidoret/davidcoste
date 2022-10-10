@@ -1,0 +1,10 @@
+title: Textes
+preset: pages
+
+drafts:
+  extends: sections/texts
+  headline: Brouillons
+
+listed:
+  extends: sections/texts
+  headline: Textes publiés

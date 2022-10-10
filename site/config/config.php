@@ -9,6 +9,10 @@ Kirby Configuration
 
 return [
 	'environment' => 'production',
+  'debug' => true,
+
+  'date.handler' => 'strftime',
+  'locale' => 'fr_FR.UTF-8',
 
 	// Autoresize plugin
 	'medienbaecker.autoresize.maxWidth' => 2000,
@@ -37,18 +41,60 @@ return [
   'thumbs' => [
     'quality' => 80,
     'driver' => 'im',
-    'bin' => '/usr/bin/convert',
+    'bin' => 'convert',
     'presets' => [
       'listitem' => [ 'width' => 300, 'height' => 170, 'crop' => 'center' ]
     ],
     'srcsets' => [
-      'default' => [300, 600, 800, 1024],
+      'default' => [300, 800, 1024, 1536],
       'cover' => [800, 1024, 1536, 2048],
-      'square' => [
-        '300vw' => [ 'width' => 300, 'height' => 300, 'crop' => 'center' ],
-        '600vw' => [ 'width' => 600, 'height' => 600, 'crop' => 'center' ],
-        '800vw' => [ 'width' => 800, 'height' => 800, 'crop' => 'center' ],
-      ],
+      'listitem' => [
+        '300w' => [
+          'width' => 300,
+          'height' => 170,
+          'crop' => 'center'
+        ],
+        '800w' => [
+          'width' => 800,
+          'height' => 450,
+          'crop' => 'center'
+        ],
+        '1024w' => [
+          'width' => 1024,
+          'height' => 576,
+          'crop' => 'center'
+        ],
+        '1536w' => [
+          'width' => 1536,
+          'height' => 864,
+          'crop' => 'center'
+        ]
+      ]
     ]
+  ],
+
+  'routes' => [
+    [
+      'pattern' => 'textes',
+      'action' => function () {
+        $firstChild = page('textes')->children()->listed()->first();
+        if($firstChild) {
+          go($firstChild->url());
+        } else {
+          return page('textes');
+        }
+      },
+    ],
+    [
+      'pattern' => 'actualites',
+      'action' => function () {
+        $firstChild = page('actualites')->children()->listed()->first();
+        if($firstChild) {
+          go($firstChild->url());
+        } else {
+          return page('actualites');
+        }
+      },
+    ],
   ],
 ];

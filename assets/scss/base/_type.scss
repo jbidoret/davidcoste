@@ -1,18 +1,84 @@
 //* fonts
-// @import "../fonts/FontFamily/FontName.css";
-
-
-body{
-  font-family: var(--basefamily); 
+@import "../fonts/fonts.css";
+html {
+  font-size: var(--basesize);
+}
+body {
+  font-family: var(--basefamily);
   font-size: var(--basesize);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.4;  
+  line-height: 1.4;
+  font-family: "Dglr", sans-serif;
+  margin: 0;
+  font-weight: var(--normalweight);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-h1, h2, h3 { font-weight: 400;}
+hr{
+  background: none;
+  border: none;
+  margin: 2em 0;
+  border-top: 2px solid #000;
+  width: 4em;
+}
 
-p, ul, ol, blockquote {
-  max-width: 35em;
+
+::selection {
+  background: black;
+  color: white;
+}
+
+sup {
+  font-weight: var(--normalweight);
+  line-height: 1;
+  vertical-align: bottom;
+}
+a {
+  color: inherit;
+  color: currentColor;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--normalweight);
+}
+
+h1 {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+}
+
+strong,
+b {
+  font-weight: var(--normalweight);
+  font-style: italic;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
 }

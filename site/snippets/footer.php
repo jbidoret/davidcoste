@@ -1,19 +1,18 @@
 
-  <footer>
+    </div>
 
 
-  </footer>
 
-  <!-- scripts -->
-  <?php
+    <!-- scripts -->
+    <?php
     if ( option('environment') == 'local' ) :
-      foreach ( option('basic-devkit.assets.scripts', array()) as $style):
+        foreach ( option('basic-devkit.assets.scripts', array()) as $style):
         echo js($style.'?version='.md5(uniqid(rand(), true)));
-      endforeach;
+        endforeach;
     else:
-      echo js('assets/production/all.min.js');
+        echo js('assets/production/all.min.js');
     endif
-  ?>
+    ?>
 
 </body>
 </html>

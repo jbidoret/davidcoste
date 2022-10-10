@@ -1,0 +1,11 @@
+title: Works
+preset: pages
+
+drafts:
+  extends: sections/works
+  headline: Project Drafts
+
+listed:
+  extends: sections/works
+  headline: Published Projects
+  layout: cards

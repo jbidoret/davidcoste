@@ -1,13 +1,17 @@
-Title: Home !
+Title: Accueil
 
 ----
 
-Text: 
+Featured-type: project
 
 ----
 
-Metadescription: 
+News: actualites/une-montagne-s-humanites-heureuses-et-autres-paysages-charmants-chapitre-3
 
 ----
 
-Metaimage:
+Project: travaux/remanence-futur
+
+----
+
+Uuid: YPM7fRMopJxYaytb

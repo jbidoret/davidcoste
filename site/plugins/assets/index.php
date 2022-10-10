@@ -3,6 +3,6 @@
 Kirby::plugin('basic-devkit/assets', [
   'options' => [
     'styles' => ["assets/css/main.css"],
-    'scripts' => ["assets/js/main.js"],
+    'scripts' => ["assets/js/flickity.pkgd.min.js","assets/js/hash.js","assets/js/main.js"],
   ]
 ]);

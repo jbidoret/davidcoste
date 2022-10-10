@@ -1,0 +1,10 @@
+title: Actualités
+preset: pages
+
+drafts:
+  extends: sections/news
+  headline: Brouillons
+
+listed:
+  extends: sections/news
+  headline: Actualités publiées

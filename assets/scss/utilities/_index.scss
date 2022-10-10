@@ -4,6 +4,8 @@
 //   "animations"
 //   etc.
 
+@import "flickity";
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,4 +13,38 @@ html {
   html {
     scroll-behavior: auto;
   }
+}
+
+// hidden helper
+
+[hidden="true"], [hidden] {
+  display: none !important;
+}
+
+
+// No select
+
+@mixin noselect {
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+
+.underlink a,
+a.underlink {
+  border-bottom: 1px solid;
+  line-height: 1;
+  display:inline-block;
+  &:hover { color: black;}
+}
+
+.hoverlink a,
+a.hoverlink {
+  border-bottom: 1px solid transparent;
+  &:hover { border-bottom: 1px solid; color: black;}
 }

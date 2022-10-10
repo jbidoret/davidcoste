@@ -1,0 +1,11 @@
+type: pages
+headline: Works
+parent: kirby.page("travaux")
+layout: cards
+template: work
+info: "{{ page.subtitle }} - {{ page.year }}"
+image:
+  query: page.cover.tofile
+  cover: true
+  ratio: 16/9
+  back: black
