@@ -20,7 +20,8 @@
                     <figure>
                         <img
                             src="<?= $image->url() ?>"
-                            srcset="<?= $image->srcset() ?>"
+                            sizes="(min-width: 460px) calc(99.02vw - 62px), calc(100vw - 34px)"
+                            srcset="<?= $image->srcset("cover") ?>"
                             alt="<?php echo $news->title() ?>">
                     </figure>
                 <?php endif; ?>
@@ -45,7 +46,8 @@
                     <figure>
                         <img
                             src="<?= $image->url() ?>"
-                            srcset="<?= $image->srcset() ?>"
+                            sizes="(min-width: 460px) calc(99.02vw - 62px), calc(100vw - 34px)"
+                            srcset="<?= $image->srcset("cover") ?>"
                             alt="<?php echo $project->title() ?>">
                     </figure>
                 <?php endif; ?>

@@ -1,54 +1,61 @@
 title: Work
-preset: page
 
 status:
   draft: Draft
   listed: Published
 
-fields:
-  subtitle:
-    label: Sous-titre
-    type: text
-  year:
-    label: Année
-    type: number
-    width: 1/4
-  featured:
-    label: Accueil aléatoire ?
-    type: toggle
-    width: 1/4
-  superimportant:
-    label: Super important ?
-    type: toggle
-    width: 1/4
-  category:
-    width: 1/4
-    label: Catégorie
-    type: select
-    options:
-      expositions: Expositions
-      oeuvres: Œuvres
-      workshops: Workshops
-      editions: Éditions
-  intro:
-    label: Introduction
-    type: textarea
-    size: small
-  text:
-    label: Texte
-    type: textarea
-    size: large
-
-sidebar:
-  cover:
-    type: fields
-    fields:
-      cover:
-        label: Cover
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields: 
+        type: fields
+        fields:
+          subtitle:
+            label: Sous-titre
+            type: text          
+          intro:
+            label: Introduction
+            type: textarea
+            size: small
+          text:
+            label: Texte
+            type: textarea
+            size: medium
+      gallery:
         type: files
-        min: 1
-        max: 1
-  gallery:
-    type: files
-    headline: Galerie
-    template: image
+        headline: Galerie
+        template: image
+        layout: cardlets
+  side:
+    width: 1/3
+    sections: 
+      cover:
+        type: fields
+        fields:
+          cover:
+            label: Cover
+            type: files
+            min: 1
+            max: 1
+          year:
+            label: Année
+            type: number
+            width: 1/4
+          featured:
+            label: Accueil aléatoire ?
+            type: toggle
+            width: 1/4
+          superimportant:
+            label: Super important ?
+            type: toggle
+            width: 1/4
+          category:
+            width: 1/4
+            label: Catégorie
+            type: select
+            options:
+              expositions: Expositions
+              oeuvres: Œuvres
+              workshops: Workshops
+              editions: Éditions
